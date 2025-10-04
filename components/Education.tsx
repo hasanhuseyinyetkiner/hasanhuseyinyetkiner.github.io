@@ -24,14 +24,25 @@ const educationData = [
 ];
 
 const EducationItem: React.FC<typeof educationData[0]> = ({ degree, institution, period, details }) => (
-  <div className="relative pl-10 pb-10 border-l-2 border-highlight/30 last:pb-0">
-    <div className="absolute -left-2.5 top-1 w-5 h-5 bg-secondary border-2 border-highlight rounded-full"></div>
-    <p className="text-sm text-gray-400 mb-1" style={{fontFamily: "'PP Editorial New', 'The Seasons', system-ui, sans-serif"}}>{period}</p>
-    <h3 className="text-xl font-semibold text-white" style={{fontFamily: "'PP Editorial New', 'The Seasons', system-ui, sans-serif", fontWeight: 600}}>{degree}</h3>
-    <p className="text-md text-accent font-semibold mb-2" style={{fontFamily: "'PP Editorial New', 'The Seasons', system-ui, sans-serif", fontWeight: 500}}>{institution}</p>
-    <ul className="list-disc list-inside text-gray-300 space-y-1" style={{fontFamily: "'PP Editorial New', 'The Seasons', system-ui, sans-serif", fontWeight: 400}}>
-      {details.map((detail, i) => <li key={i}>{detail}</li>)}
-    </ul>
+  <div className="relative pl-8 pb-12 border-l border-highlight/20 last:pb-0">
+    <div className="absolute -left-[5px] top-1 w-[9px] h-[9px] bg-highlight rounded-full"></div>
+    <p className="text-sm text-gray-500 mb-2" style={{fontFamily: "'PP Editorial New', 'The Seasons', system-ui, sans-serif", fontWeight: 400, letterSpacing: '-0.01em'}}>
+      {period}
+    </p>
+    <h3 className="text-xl md:text-2xl text-white mb-1" style={{fontFamily: "'PP Editorial New', 'The Seasons', system-ui, sans-serif", fontWeight: 500, letterSpacing: '-0.01em'}}>
+      {degree}
+    </h3>
+    <p className="text-base text-accent mb-4" style={{fontFamily: "'PP Editorial New', 'The Seasons', system-ui, sans-serif", fontWeight: 400}}>
+      {institution}
+    </p>
+    <div className="space-y-2">
+      {details.map((detail, i) => (
+        <p key={i} className="text-gray-400 leading-relaxed text-sm md:text-base flex items-start" style={{fontFamily: "'PP Editorial New', 'The Seasons', system-ui, sans-serif", fontWeight: 400}}>
+          <span className="text-highlight mr-3 mt-1.5 flex-shrink-0">•</span>
+          <span>{detail}</span>
+        </p>
+      ))}
+    </div>
   </div>
 );
 
@@ -43,7 +54,7 @@ const Education: React.FC = () => {
       <h2 className="text-4xl md:text-5xl font-light text-center text-white mb-16 leading-tight" style={{fontFamily: "'PP Editorial New', 'The Seasons', system-ui, sans-serif", fontWeight: 300, letterSpacing: '-0.02em'}}>
         {t('sections.education')}
       </h2>
-      <div className="max-w-3xl mx-auto">
+      <div className="max-w-4xl mx-auto">
         {educationData.map((item, index) => (
           <EducationItem key={index} {...item} />
         ))}

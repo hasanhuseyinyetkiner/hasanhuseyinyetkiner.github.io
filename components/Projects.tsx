@@ -22,9 +22,13 @@ const projects = [
 ];
 
 const ProjectCard: React.FC<typeof projects[0]> = ({ title, description }) => (
-  <div className="bg-secondary/70 p-6 rounded-lg shadow-lg h-full transform hover:-translate-y-2 transition-transform duration-300">
-    <h3 className="text-xl font-semibold text-white mb-3" style={{fontFamily: "'PP Editorial New', 'The Seasons', system-ui, sans-serif", fontWeight: 600}}>{title}</h3>
-    <p className="text-gray-300" style={{fontFamily: "'PP Editorial New', 'The Seasons', system-ui, sans-serif", fontWeight: 400}}>{description}</p>
+  <div className="bg-secondary/40 backdrop-blur-sm p-6 rounded-2xl border border-gray-800 hover:border-highlight/50 transition-all duration-500 hover:-translate-y-2 h-full flex flex-col">
+    <h3 className="text-lg md:text-xl text-white mb-3" style={{fontFamily: "'PP Editorial New', 'The Seasons', system-ui, sans-serif", fontWeight: 500, letterSpacing: '-0.01em'}}>
+      {title}
+    </h3>
+    <p className="text-gray-400 text-sm leading-relaxed flex-grow" style={{fontFamily: "'PP Editorial New', 'The Seasons', system-ui, sans-serif", fontWeight: 400}}>
+      {description}
+    </p>
   </div>
 );
 
@@ -33,8 +37,10 @@ const Projects: React.FC = () => {
   
   return (
     <AnimatedSection id="projects">
-      <h2 className="text-4xl md:text-5xl font-light text-center text-white mb-16 leading-tight" style={{fontFamily: "'PP Editorial New', 'The Seasons', system-ui, sans-serif", fontWeight: 300, letterSpacing: '-0.02em'}}>{t('sections.projects')}</h2>
-      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <h2 className="text-4xl md:text-5xl font-light text-center text-white mb-16 leading-tight" style={{fontFamily: "'PP Editorial New', 'The Seasons', system-ui, sans-serif", fontWeight: 300, letterSpacing: '-0.02em'}}>
+        {t('sections.projects')}
+      </h2>
+      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         {projects.map((project, index) => (
           <ProjectCard key={index} {...project} />
         ))}
