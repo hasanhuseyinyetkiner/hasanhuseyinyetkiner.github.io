@@ -1,31 +1,34 @@
 import React from 'react';
+import { useLanguage } from '../contexts/LanguageContext';
 
 const Hero: React.FC = () => {
+  const { t } = useLanguage();
+  
   return (
     <section id="home" className="flex items-center min-h-screen py-20 md:py-0">
       <div className="container mx-auto flex flex-col md:flex-row items-center justify-between gap-12 text-center md:text-left">
         <div className="md:w-1/2 animate-fade-in-up">
-          <h1 className="text-5xl md:text-7xl font-serif font-light text-white leading-tighter tracking-tighter">
-            Hasan Hüseyin Yetkiner
+          <h1 className="text-5xl md:text-7xl lg:text-8xl font-extralight text-white leading-[0.95] tracking-tight" style={{fontFamily: "'PP Editorial New', 'The Seasons', system-ui, sans-serif", fontWeight: 200, letterSpacing: '-0.02em'}}>
+            {t('hero.title')}
           </h1>
-          <p className="mt-4 text-xl md:text-2xl text-accent">
-            Electrical-Electronics & Computer Engineer
+          <p className="mt-6 text-xl md:text-2xl lg:text-3xl font-light text-accent tracking-tight" style={{fontFamily: "'PP Editorial New', 'The Seasons', system-ui, sans-serif", fontWeight: 300, letterSpacing: '-0.01em'}}>
+            {t('hero.subtitle')}
           </p>
-          <p className="mt-6 max-w-xl mx-auto md:mx-0 text-lg text-gray-300">
-            A resilient and innovative engineer with expertise in C++, Qt Framework, and AI/ML, passionate about solving complex challenges at the intersection of advanced engineering and artificial intelligence.
+          <p className="mt-8 max-w-xl mx-auto md:mx-0 text-base md:text-lg text-gray-300 font-normal leading-relaxed" style={{fontFamily: "'PP Editorial New', 'The Seasons', system-ui, sans-serif", fontWeight: 400}}>
+            {t('hero.description')}
           </p>
-          <div className="mt-10">
-            <a href="#contact" className="px-8 py-3 bg-highlight text-white font-semibold rounded-lg shadow-lg hover:bg-opacity-80 transition-all duration-300 transform hover:scale-105">
-              Get In Touch
+          <div className="mt-12">
+            <a href="#contact" className="inline-block px-10 py-4 bg-highlight text-white font-normal rounded-full shadow-xl hover:bg-opacity-90 transition-all duration-500 hover:shadow-2xl hover:-translate-y-0.5" style={{fontFamily: "'PP Editorial New', 'The Seasons', system-ui, sans-serif", fontWeight: 500, fontSize: '17px', letterSpacing: '-0.01em'}}>
+              {t('hero.cta')}
             </a>
           </div>
         </div>
-        <div className="md:w-1/2 flex justify-center md:justify-end animate-fade-in-up" style={{animationDelay: '0.2s'}}>
-            <img
-                src="https://storage.googleapis.com/aai-web-samples/scenarios/portfolio-cv-image.png"
-                alt="Hasan Hüseyin Yetkiner"
-                className="rounded-full object-cover w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96 border-4 border-highlight shadow-2xl"
-            />
+        <div className="md:w-1/2 animate-fade-in-up [animation-delay:200ms]">
+          <img 
+            src="/d.jpeg" 
+            alt="Hasan Hüseyin Yetkiner" 
+            className="w-full max-w-md mx-auto rounded-lg shadow-2xl object-cover object-right h-[400px] md:h-[500px] lg:h-[600px]"
+          />
         </div>
       </div>
     </section>

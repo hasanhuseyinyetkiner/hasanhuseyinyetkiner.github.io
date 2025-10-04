@@ -1,7 +1,8 @@
 import React from 'react';
 import AnimatedSection from './AnimatedSection';
+import { useLanguage } from '../contexts/LanguageContext';
 
-const projectData = [
+const projects = [
   {
     title: 'AI-powered Herd Management System (Ongoing)',
     description: 'Developing a scalable system integrating Flutter, RESTful API, PostgreSQL, Vector Database, YOLO, LSTM, and GRU. Strengthening decision-making mechanisms with AI algorithms.',
@@ -20,20 +21,22 @@ const projectData = [
   }
 ];
 
-const ProjectCard: React.FC<typeof projectData[0]> = ({ title, description }) => (
+const ProjectCard: React.FC<typeof projects[0]> = ({ title, description }) => (
   <div className="bg-secondary/70 p-6 rounded-lg shadow-lg h-full transform hover:-translate-y-2 transition-transform duration-300">
-    <h3 className="text-xl font-semibold text-white mb-3">{title}</h3>
-    <p className="text-gray-300">{description}</p>
+    <h3 className="text-xl font-semibold text-white mb-3" style={{fontFamily: "'PP Editorial New', 'The Seasons', system-ui, sans-serif", fontWeight: 600}}>{title}</h3>
+    <p className="text-gray-300" style={{fontFamily: "'PP Editorial New', 'The Seasons', system-ui, sans-serif", fontWeight: 400}}>{description}</p>
   </div>
 );
 
 const Projects: React.FC = () => {
+  const { t } = useLanguage();
+  
   return (
     <AnimatedSection id="projects">
-      <h2 className="text-4xl font-serif font-light text-center text-white mb-16 leading-tighter tracking-tighter">Projects</h2>
-      <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
-        {projectData.map((item, index) => (
-          <ProjectCard key={index} {...item} />
+      <h2 className="text-4xl md:text-5xl font-light text-center text-white mb-16 leading-tight" style={{fontFamily: "'PP Editorial New', 'The Seasons', system-ui, sans-serif", fontWeight: 300, letterSpacing: '-0.02em'}}>{t('sections.projects')}</h2>
+      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {projects.map((project, index) => (
+          <ProjectCard key={index} {...project} />
         ))}
       </div>
     </AnimatedSection>

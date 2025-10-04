@@ -1,22 +1,22 @@
 import React from 'react';
 import AnimatedSection from './AnimatedSection';
-import { LinkedInIcon, MailIcon } from './Icons';
+import { MailIcon } from './Icons';
+import { useLanguage } from '../contexts/LanguageContext';
 
 const Contact: React.FC = () => {
+  const { t } = useLanguage();
+  
   return (
     <AnimatedSection id="contact">
       <div className="text-center max-w-2xl mx-auto">
-        <h2 className="text-4xl font-serif font-light text-white mb-4 leading-tighter tracking-tighter">Let's Connect</h2>
-        <p className="text-lg text-accent mb-12">
-          I'm always open to discussing new projects, creative ideas, or opportunities to be part of an ambitious vision.
+        <h2 className="text-4xl md:text-5xl font-light text-white mb-4 leading-tight" style={{fontFamily: "'PP Editorial New', 'The Seasons', system-ui, sans-serif", fontWeight: 300, letterSpacing: '-0.02em'}}>{t('contact.title')}</h2>
+        <p className="text-lg text-accent mb-12" style={{fontFamily: "'PP Editorial New', 'The Seasons', system-ui, sans-serif", fontWeight: 400}}>
+          {t('contact.description')}
         </p>
-        <a href="mailto:hasanhuseyinyetkiner@gmail.com" className="inline-block px-10 py-4 bg-highlight text-white font-bold rounded-lg shadow-lg hover:bg-opacity-80 transition-all duration-300 transform hover:scale-105">
-          Send me an Email
+        <a href="mailto:hasanhuseyinyetkiner@gmail.com" className="inline-block px-10 py-4 bg-highlight text-white font-normal rounded-full shadow-xl hover:bg-opacity-90 transition-all duration-500 hover:shadow-2xl hover:-translate-y-0.5" style={{fontFamily: "'PP Editorial New', 'The Seasons', system-ui, sans-serif", fontWeight: 500, fontSize: '17px', letterSpacing: '-0.01em'}}>
+          {t('contact.cta')}
         </a>
         <div className="mt-16 flex justify-center items-center space-x-8">
-          <a href="https://www.linkedin.com/in/hasan-huseyin-yetkiner/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors duration-300" aria-label="LinkedIn">
-            <LinkedInIcon />
-          </a>
            <a href="mailto:hasanhuseyinyetkiner@gmail.com" className="text-gray-400 hover:text-white transition-colors duration-300" aria-label="Email">
             <MailIcon />
           </a>

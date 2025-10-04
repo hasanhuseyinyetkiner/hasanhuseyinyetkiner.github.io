@@ -17,8 +17,8 @@
               'highlight': '#a88532',
             },
             fontFamily: {
-              sans: ['Inter', 'sans-serif'],
-              serif: ['Playfair Display', 'serif'],
+              sans: ['"PP Editorial New"', '"The Seasons"', 'Inter', 'system-ui', 'sans-serif'],
+              serif: ['"The Seasons"', 'Playfair Display', 'serif'],
             },
             lineHeight: {
               'tighter': '1.1',
@@ -32,13 +32,48 @@
                 '100%': { opacity: '1', transform: 'translateY(0)' },
               },
             },
+            animationDelay: {
+              '200': '0.2s',
+            },
           },
         },
       }
     </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Playfair+Display:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+      @font-face {
+        font-family: 'PP Editorial New';
+        font-weight: 200;
+        font-style: normal;
+        font-display: swap;
+        src: url('https://pangrampangram.com/cdn/shop/files/PPEditorialNew-Ultralight.woff2') format('woff2'),
+             url('https://pangrampangram.com/cdn/shop/files/PPEditorialNew-Ultralight.woff') format('woff');
+      }
+      
+      @font-face {
+        font-family: 'The Seasons';
+        font-weight: 400;
+        font-style: normal;
+        font-display: swap;
+        src: url('https://fontsfree.net/wp-content/fonts/basic/sans-serif/FontsFree-Net-The-Seasons.ttf') format('truetype');
+      }
+      
+      /* Premium Typography Settings */
+      body {
+        font-family: 'PP Editorial New', 'The Seasons', 'Inter', system-ui, -apple-system, sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        text-rendering: optimizeLegibility;
+        font-feature-settings: 'kern' 1, 'liga' 1;
+      }
+      
+      h1, h2, h3, h4, h5, h6 {
+        font-family: 'PP Editorial New', 'The Seasons', system-ui, sans-serif;
+        font-feature-settings: 'kern' 1, 'liga' 1, 'ss01' 1;
+      }
+    </style>
   <script type="importmap">
 {
   "imports": {

@@ -1,5 +1,6 @@
 
 import React from 'react';
+import { LanguageProvider } from './contexts/LanguageContext';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import About from './components/About';
@@ -13,20 +14,22 @@ import Footer from './components/Footer';
 
 const App: React.FC = () => {
   return (
-    <div className="bg-primary text-accent font-sans selection:bg-highlight/30">
-      <Header />
-      <main className="container mx-auto px-6 md:px-12">
-        <Hero />
-        <About />
-        <KeyAchievements />
-        <Experience />
-        <Education />
-        <Projects />
-        <Skills />
-        <Contact />
-      </main>
-      <Footer />
-    </div>
+    <LanguageProvider>
+      <div className="bg-primary text-accent font-sans selection:bg-highlight/30">
+        <Header />
+        <main className="container mx-auto px-6 md:px-12">
+          <Hero />
+          <About />
+          <KeyAchievements />
+          <Experience />
+          <Education />
+          <Projects />
+          <Skills />
+          <Contact />
+        </main>
+        <Footer />
+      </div>
+    </LanguageProvider>
   );
 };
 

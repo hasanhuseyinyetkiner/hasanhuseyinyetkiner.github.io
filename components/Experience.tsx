@@ -1,5 +1,6 @@
 import React from 'react';
 import AnimatedSection from './AnimatedSection';
+import { useLanguage } from '../contexts/LanguageContext';
 
 const experienceData = [
   {
@@ -20,10 +21,10 @@ const experienceData = [
     company: 'Baykar Technologies',
     period: '09/2024 - 12/2024',
     description: [
-        'Contributed to user interface (UI) development projects for the Gimbal system developed for the Bayraktar TB2, using C++ and the Qt Framework.',
-        'Designed the infrastructure for real-time image processing, data streaming, and video broadcasting using QML, GStreamer, OpenCV, and FFmpeg.',
-        'Developed comprehensive interfaces including TCP, UDP, and serial communication protocols, ensuring stable and high-speed data transmission.',
-        'Enhanced my advanced C++/Qt skills and achieved significant improvements in efficiency.',
+      'Contributed to user interface (UI) development projects for the Gimbal system developed for the Bayraktar TB2, using C++ and the Qt Framework.',
+      'Designed the infrastructure for real-time image processing, data streaming, and video broadcasting using QML, GStreamer, OpenCV, and FFmpeg.',
+      'Developed comprehensive interfaces including TCP, UDP, and serial communication protocols, ensuring stable and high-speed data transmission.',
+      'Enhanced my advanced C++/Qt skills and achieved significant improvements in efficiency.',
     ]
   },
   {
@@ -31,9 +32,9 @@ const experienceData = [
     company: 'Turkish Airlines',
     period: '09/2023 - 06/2024',
     description: [
-        'Participated in planning and coordination of operational activities such as fuel calculation, cargo unloading, and passenger transfer.',
-        'Performed risk analyses and ensured real-time data monitoring to improve flight safety and operational efficiency.',
-        'Through team-based optimization efforts, reduced the average waiting time in flight operations by 2% and achieved a 3% increase in overall operational efficiency.',
+      'Participated in planning and coordination of operational activities such as fuel calculation, cargo unloading, and passenger transfer.',
+      'Performed risk analyses and ensured real-time data monitoring to improve flight safety and operational efficiency.',
+      'Through team-based optimization efforts, reduced the average waiting time in flight operations by 2% and achieved a 3% increase in overall operational efficiency.',
     ]
   },
   {
@@ -41,9 +42,9 @@ const experienceData = [
     company: 'Aselsan',
     period: '06/2023 - 08/2023',
     description: [
-        'As an intern, worked on ALTAY Tank projects using the Robot Operating System (ROS) with tools such as Gazebo and Rviz on Ubuntu.',
-        'Gained experience in high-accuracy mapping and localization by processing data from LIDAR sensors.',
-        'Through my optimizations, achieved a 100% time saving in sensor data processing.',
+      'As an intern, worked on ALTAY Tank projects using the Robot Operating System (ROS) with tools such as Gazebo and Rviz on Ubuntu.',
+      'Gained experience in high-accuracy mapping and localization by processing data from LIDAR sensors.',
+      'Through my optimizations, achieved a 100% time saving in sensor data processing.',
     ]
   },
   {
@@ -51,10 +52,10 @@ const experienceData = [
     company: 'Millenicom',
     period: '09/2020 - 08/2022',
     description: [
-        'Selected as the top performer among 196 employees and received four promotions.',
-        'Provided training on network infrastructure and troubleshooting (TCP/IP, DSLAM, modem, router, switch).',
-        'Managed technical support records through CRM systems and delivered usage training.',
-        'Shared knowledge on ITSM processes and CMDB configuration in internal training sessions for technical staff.',
+      'Selected as the top performer among 196 employees and received four promotions.',
+      'Provided training on network infrastructure and troubleshooting (TCP/IP, DSLAM, modem, router, switch).',
+      'Managed technical support records through CRM systems and delivered usage training.',
+      'Shared knowledge on ITSM processes and CMDB configuration in internal training sessions for technical staff.',
     ]
   }
 ];
@@ -62,19 +63,23 @@ const experienceData = [
 const ExperienceItem: React.FC<(typeof experienceData)[0]> = ({ role, company, period, description }) => (
   <div className="relative pl-10 pb-10 border-l-2 border-highlight/30 last:pb-0">
     <div className="absolute -left-2.5 top-1 w-5 h-5 bg-secondary border-2 border-highlight rounded-full"></div>
-    <p className="text-sm text-gray-400 mb-1">{period}</p>
-    <h3 className="text-xl font-sans font-semibold text-white">{role}</h3>
-    <p className="text-md text-accent font-semibold mb-2">{company}</p>
-    <ul className="list-disc list-inside text-gray-300 space-y-1">
-        {description.map((point, index) => <li key={index}>{point}</li>)}
+    <p className="text-sm text-gray-400 mb-1" style={{fontFamily: "'PP Editorial New', 'The Seasons', system-ui, sans-serif"}}>{period}</p>
+    <h3 className="text-xl font-semibold text-white" style={{fontFamily: "'PP Editorial New', 'The Seasons', system-ui, sans-serif", fontWeight: 600}}>{role}</h3>
+    <p className="text-md text-accent font-semibold mb-2" style={{fontFamily: "'PP Editorial New', 'The Seasons', system-ui, sans-serif", fontWeight: 500}}>{company}</p>
+    <ul className="list-disc list-inside text-gray-300 space-y-1" style={{fontFamily: "'PP Editorial New', 'The Seasons', system-ui, sans-serif", fontWeight: 400}}>
+      {description.map((point, index) => <li key={index}>{point}</li>)}
     </ul>
   </div>
 );
 
 const Experience: React.FC = () => {
+  const { t } = useLanguage();
+  
   return (
     <AnimatedSection id="experience">
-      <h2 className="text-4xl font-serif font-light text-center text-white mb-16 leading-tighter tracking-tighter">Experience</h2>
+      <h2 className="text-4xl md:text-5xl font-light text-center text-white mb-16 leading-tight" style={{fontFamily: "'PP Editorial New', 'The Seasons', system-ui, sans-serif", fontWeight: 300, letterSpacing: '-0.02em'}}>
+        {t('sections.experience')}
+      </h2>
       <div className="max-w-3xl mx-auto">
         {experienceData.map((item, index) => (
           <ExperienceItem key={index} {...item} />
