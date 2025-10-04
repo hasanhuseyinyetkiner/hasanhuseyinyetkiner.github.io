@@ -31,7 +31,7 @@ const Skills: React.FC = () => {
       </h2>
       <div className="max-w-5xl mx-auto">
         <h3 className="text-2xl md:text-3xl font-light text-white mb-6" style={{fontFamily: "'PP Editorial New', 'The Seasons', system-ui, sans-serif", fontWeight: 400, letterSpacing: '-0.01em'}}>
-          Technical Skills
+          {t('skills.technical')}
         </h3>
         <div className="flex flex-wrap gap-3 mb-16">
           {technicalSkills.map((skill) => (
@@ -39,7 +39,7 @@ const Skills: React.FC = () => {
           ))}
         </div>
         <h3 className="text-2xl md:text-3xl font-light text-white mb-6" style={{fontFamily: "'PP Editorial New', 'The Seasons', system-ui, sans-serif", fontWeight: 400, letterSpacing: '-0.01em'}}>
-          Personal Skills
+          {t('skills.personal')}
         </h3>
         <div className="flex flex-wrap gap-3">
           {personalSkills.map((skill) => (

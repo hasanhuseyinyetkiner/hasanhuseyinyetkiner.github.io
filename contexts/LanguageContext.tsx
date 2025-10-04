@@ -42,6 +42,10 @@ const translations = {
     'sections.skills': 'Yetenekler ve Uzmanlık',
     'sections.achievements': 'Başlıca Başarılar',
     
+    // Skills Section
+    'skills.technical': 'Teknik Yetenekler',
+    'skills.personal': 'Kişisel Yetenekler',
+    
     // Footer
     'footer.rights': 'Tüm Hakları Saklıdır.',
     'footer.tagline': 'Profesyonellikle Tasarlandı ve Geliştirildi.',
@@ -79,6 +83,10 @@ const translations = {
     'sections.skills': 'Skills & Expertise',
     'sections.achievements': 'Key Achievements',
     
+    // Skills Section
+    'skills.technical': 'Technical Skills',
+    'skills.personal': 'Personal Skills',
+    
     // Footer
     'footer.rights': 'All Rights Reserved.',
     'footer.tagline': 'Designed & Built with Professionalism.',
@@ -115,6 +123,10 @@ const translations = {
     'sections.projects': 'Progetti',
     'sections.skills': 'Competenze e Specializzazioni',
     'sections.achievements': 'Principali Risultati',
+    
+    // Skills Section
+    'skills.technical': 'Competenze Tecniche',
+    'skills.personal': 'Competenze Personali',
     
     // Footer
     'footer.rights': 'Tutti i Diritti Riservati.',
