@@ -4,7 +4,10 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Professional Business Portfolio</title>
+    <meta name="description" content="Hasan Hüseyin Yetkiner - Full Stack Developer & AI Engineer specializing in C++, Qt, Machine Learning, and Advanced Engineering Solutions" />
+    <meta name="author" content="Hasan Hüseyin Yetkiner" />
+    <meta name="keywords" content="Full Stack Developer, AI Engineer, C++, Qt Framework, Machine Learning, Software Engineer, Baykar, Aselsan, Turkish Airlines" />
+    <title>Hasan Hüseyin Yetkiner | Full Stack Developer & AI Engineer</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
@@ -72,6 +75,29 @@
       h1, h2, h3, h4, h5, h6 {
         font-family: 'PP Editorial New', 'The Seasons', system-ui, sans-serif;
         font-feature-settings: 'kern' 1, 'liga' 1, 'ss01' 1;
+      }
+      
+      /* Responsive adjustments for mobile and tablet */
+      @media (max-width: 768px) {
+        section {
+          min-height: auto !important;
+        }
+        
+        .min-h-screen {
+          min-height: 100vh;
+        }
+      }
+      
+      /* Smooth scrolling */
+      html {
+        scroll-behavior: smooth;
+      }
+      
+      /* Fix for mobile viewport height */
+      @supports (-webkit-touch-callout: none) {
+        .min-h-screen {
+          min-height: -webkit-fill-available;
+        }
       }
     </style>
   <script type="importmap">
