@@ -1,6 +1,8 @@
 import React from 'react';
 import { useLanguage } from '../contexts/LanguageContext';
 import { useTheme } from '../contexts/ThemeContext';
+import darkImage from '../assets/d.jpeg';
+import lightImage from '../assets/x.jpeg';
 
 const Hero: React.FC = () => {
   const { t } = useLanguage();
@@ -27,11 +29,9 @@ const Hero: React.FC = () => {
         </div>
         <div className="w-full md:w-1/2 animate-fade-in-up [animation-delay:200ms] mt-8 md:mt-0">
           <img 
-            src={theme === 'dark' ? '/d.jpeg' : '/x.jpeg'}
+            src={theme === 'dark' ? darkImage : lightImage}
             alt="Hasan Hüseyin Yetkiner" 
-            className={`w-full max-w-md sm:max-w-lg lg:max-w-xl mx-auto rounded-lg shadow-2xl object-cover h-[420px] sm:h-[500px] md:h-[580px] lg:h-[680px] xl:h-[750px] ${
-              theme === 'light' ? 'object-center' : 'object-right'
-            }`}
+            className="w-full max-w-md sm:max-w-lg lg:max-w-xl mx-auto rounded-lg shadow-2xl object-cover object-center h-[420px] sm:h-[500px] md:h-[580px] lg:h-[680px] xl:h-[750px]"
           />
         </div>
       </div>
