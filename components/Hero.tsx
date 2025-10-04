@@ -1,8 +1,10 @@
 import React from 'react';
 import { useLanguage } from '../contexts/LanguageContext';
+import { useTheme } from '../contexts/ThemeContext';
 
 const Hero: React.FC = () => {
   const { t } = useLanguage();
+  const { theme } = useTheme();
   
   return (
     <section id="home" className="flex items-center min-h-screen py-16 md:py-20 lg:py-0">
@@ -25,7 +27,7 @@ const Hero: React.FC = () => {
         </div>
         <div className="w-full md:w-1/2 animate-fade-in-up [animation-delay:200ms] mt-8 md:mt-0">
           <img 
-            src="/d.jpeg" 
+            src={theme === 'dark' ? '/d.jpeg' : '/x.jpeg'}
             alt="Hasan Hüseyin Yetkiner" 
             className="w-full max-w-md sm:max-w-lg lg:max-w-xl mx-auto rounded-lg shadow-2xl object-cover object-right h-[420px] sm:h-[500px] md:h-[580px] lg:h-[680px] xl:h-[750px]"
           />

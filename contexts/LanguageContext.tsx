@@ -46,6 +46,16 @@ const translations = {
     'skills.technical': 'Teknik Yetenekler',
     'skills.personal': 'Kişisel Yetenekler',
     
+    // Achievements
+    'achievement.award.title': 'En İyi Çalışan Ödülü',
+    'achievement.award.description': 'Millenicom\'da 196 çalışan arasında performansta birinci oldum.',
+    'achievement.graduation.title': 'Hızlandırılmış Mezuniyet',
+    'achievement.graduation.description': '4 yıl yerine 3 yılda çift anadal programını tamamladım.',
+    'achievement.gimbal.title': 'Gimbal Arayüz Entegrasyonu',
+    'achievement.gimbal.description': 'Baykar\'da Gimbal arayüzü için C++ ve Qt Framework\'ün entegre kullanımına katkıda bulundum.',
+    'achievement.leadership.title': 'Teknik Destek Liderliği',
+    'achievement.leadership.description': '1.000\'den fazla Millenicom müşterisi için teknik sorunları çözmek üzere bir ekibe liderlik ettim ve eğitim verdim.',
+    
     // Footer
     'footer.rights': 'Tüm Hakları Saklıdır.',
     'footer.tagline': 'Profesyonellikle Tasarlandı ve Geliştirildi.',
@@ -87,6 +97,16 @@ const translations = {
     'skills.technical': 'Technical Skills',
     'skills.personal': 'Personal Skills',
     
+    // Achievements
+    'achievement.award.title': 'Best Employee Award',
+    'achievement.award.description': 'Ranked first in performance among 196 employees at Millenicom.',
+    'achievement.graduation.title': 'Accelerated Graduation',
+    'achievement.graduation.description': 'Completed the double major program in 3 years instead of 4.',
+    'achievement.gimbal.title': 'Gimbal Interface Integration',
+    'achievement.gimbal.description': 'Contributed to the integrated use of C++ and the Qt Framework for the Gimbal interface at Baykar.',
+    'achievement.leadership.title': 'Technical Support Leadership',
+    'achievement.leadership.description': 'Led a team and provided training to resolve technical issues for more than 1,000 Millenicom customers.',
+    
     // Footer
     'footer.rights': 'All Rights Reserved.',
     'footer.tagline': 'Designed & Built with Professionalism.',
@@ -127,6 +147,16 @@ const translations = {
     // Skills Section
     'skills.technical': 'Competenze Tecniche',
     'skills.personal': 'Competenze Personali',
+    
+    // Achievements
+    'achievement.award.title': 'Premio Miglior Dipendente',
+    'achievement.award.description': 'Classificato primo nelle prestazioni tra 196 dipendenti presso Millenicom.',
+    'achievement.graduation.title': 'Laurea Accelerata',
+    'achievement.graduation.description': 'Completato il programma di doppia specializzazione in 3 anni invece di 4.',
+    'achievement.gimbal.title': 'Integrazione Interfaccia Gimbal',
+    'achievement.gimbal.description': 'Contribuito all\'uso integrato di C++ e del Qt Framework per l\'interfaccia Gimbal presso Baykar.',
+    'achievement.leadership.title': 'Leadership nel Supporto Tecnico',
+    'achievement.leadership.description': 'Guidato un team e fornito formazione per risolvere problemi tecnici per più di 1.000 clienti Millenicom.',
     
     // Footer
     'footer.rights': 'Tutti i Diritti Riservati.',
