@@ -27,7 +27,7 @@ const Hero: React.FC = () => {
           <img 
             src="/d.jpeg" 
             alt="Hasan Hüseyin Yetkiner" 
-            className="w-full max-w-sm sm:max-w-md mx-auto rounded-lg shadow-2xl object-cover object-right h-[320px] sm:h-[380px] md:h-[450px] lg:h-[550px] xl:h-[600px]"
+            className="w-full max-w-md sm:max-w-lg lg:max-w-xl mx-auto rounded-lg shadow-2xl object-cover object-right h-[420px] sm:h-[500px] md:h-[580px] lg:h-[680px] xl:h-[750px]"
           />
         </div>
       </div>
