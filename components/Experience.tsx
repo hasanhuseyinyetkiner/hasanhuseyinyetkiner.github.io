@@ -10,6 +10,7 @@ const getExperienceData = (language: string) => {
         company: 'Mepsan',
         period: '04/2025 - Present',
         description: [
+          'Delivered a MES (Manufacturing Execution System) that orchestrates production and field device data for Mepsan.',
           'Developed communication software for smart pump systems using Qt/C++ in Linaro, RS485, and Ubuntu environments.',
           'Designed performance-oriented, multi-protocol interface software compatible with devices from different manufacturers for factory personnel tracking.',
           'Built scalable backend services and RESTful API integrations using Node.js, Express.js, and Socket.io.',
@@ -67,6 +68,7 @@ const getExperienceData = (language: string) => {
         company: 'Mepsan',
         period: '04/2025 - Devam Ediyor',
         description: [
+          'Mepsan için üretim ve saha cihazı verisini orkestre eden bir MES (Manufacturing Execution System) teslim ettim.',
           'Linaro, RS485 ve Ubuntu ortamlarında Qt/C++ kullanarak akıllı pompa sistemleri için iletişim yazılımı geliştirdim.',
           'Fabrika personel takibi için farklı üreticilerin cihazlarıyla uyumlu, performans odaklı, çok protokollü arayüz yazılımı tasarladım.',
           'Node.js, Express.js ve Socket.io kullanarak ölçeklenebilir backend servisleri ve RESTful API entegrasyonları oluşturdum.',
@@ -124,6 +126,7 @@ const getExperienceData = (language: string) => {
         company: 'Mepsan',
         period: '04/2025 - Presente',
         description: [
+          'Consegnato un MES (Manufacturing Execution System) che orchestra dati di produzione e dispositivi sul campo per Mepsan.',
           'Sviluppato software di comunicazione per sistemi di pompe intelligenti utilizzando Qt/C++ in ambienti Linaro, RS485 e Ubuntu.',
           'Progettato software di interfaccia multi-protocollo orientato alle prestazioni compatibile con dispositivi di diversi produttori per il monitoraggio del personale di fabbrica.',
           'Costruito servizi backend scalabili e integrazioni API RESTful utilizzando Node.js, Express.js e Socket.io.',
@@ -222,3 +225,7 @@ const Experience: React.FC = () => {
 };
 
 export default Experience;
+
+// ### Module-Summary
+// Deneyim kayıtlarını dil bazlı olarak seçer, animasyonlu bölümde listeler ve
+// her rol için dönem, şirket ve madde madde sorumlulukları gösterir.

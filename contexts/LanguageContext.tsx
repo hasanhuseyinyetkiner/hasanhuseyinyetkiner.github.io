@@ -26,7 +26,7 @@ const translations = {
     
     // About/Summary
     'about.title': 'Özet',
-    'about.p1': 'Elektrik-Elektronik ve Bilgisayar Mühendisliği çift anadal programını sadece üç yıl gibi kısa bir sürede başarıyla tamamlayan bir mühendisim. Adıyaman depreminde enkazın altında kalarak hayatta kalan biri olarak, güçlü bir dayanıklılık ve kriz yönetimi becerileri geliştirdim. Teknik uzmanlığım C++, Qt Framework ve makine öğrenimi (ML/AI) üzerine yoğunlaşmaktadır; YOLO, LSTM, GRU, ConvS2S, Seq2Seq ve zaman serisi tahminleme gibi gelişmiş modelleri kullanmaktayım.',
+    'about.p1': 'Elektrik-Elektronik ve Bilgisayar Mühendisliği çift anadal programını sadece üç yıl gibi kısa bir sürede başarıyla tamamlayan bir mühendisim. Mepsan için MES (Manufacturing Execution System) çözümü geliştirdim. Teknik uzmanlığım C++, Qt Framework ve makine öğrenimi (ML/AI) üzerine yoğunlaşmaktadır; YOLO, LSTM, GRU, ConvS2S, Seq2Seq ve zaman serisi tahminleme gibi gelişmiş modelleri kullanmaktayım.',
     'about.p2': 'Birden fazla şirkette çeşitli projeler üzerinde çalışarak, sensör füzyonu, otonom sistemler, uçuş operasyonları ve ağ yönetimi gibi geniş bir yetenek seti geliştirdim. Verimlilik, yenilikçilik ve takım çalışması konusunda tutkuluyum ve kariyer hedefim, ileri mühendislik ve yapay zekanın kesiştiği projelere katkıda bulunmaktır.',
     'about.p3': 'Ayrıca, CMDB ve ITSM süreçleri konusunda pratik bilgiye sahip olup, BT çözüm entegrasyonu ve uygulamasında uygulamalı deneyime sahibim. CRM ve SFA sistemlerinde, özellikle müşteri ilişkileri yönetimi ve satış otomasyonu konularında sağlam bir uzmanlığa sahibim.',
     
@@ -77,7 +77,7 @@ const translations = {
     
     // About/Summary
     'about.title': 'Summary',
-    'about.p1': 'I am an engineer who successfully completed a double major in Electrical-Electronics and Computer Engineering within just three years. As a survivor of the Adıyaman earthquake, where I was trapped under the rubble, I developed strong resilience and crisis management skills. My technical expertise centers on C++, the Qt Framework, and machine learning (ML/AI), including advanced models such as YOLO, LSTM, GRU, ConvS2S, Seq2Seq, and time series forecasting.',
+    'about.p1': 'I am an engineer who successfully completed a double major in Electrical-Electronics and Computer Engineering within just three years. I built a MES (Manufacturing Execution System) solution for Mepsan. My technical expertise centers on C++, the Qt Framework, and machine learning (ML/AI), including advanced models such as YOLO, LSTM, GRU, ConvS2S, Seq2Seq, and time series forecasting.',
     'about.p2': 'Through diverse projects across multiple companies, I have built a broad skill set spanning sensor fusion, autonomous systems, flight operations, and network management. I am driven by a passion for efficiency, innovation, and teamwork, and my career goal is to contribute to projects at the intersection of advanced engineering and artificial intelligence.',
     'about.p3': 'In addition, I bring practical knowledge of CMDB and ITSM processes, with hands-on experience in IT solution integration and implementation. I also possess solid expertise in CRM and SFA systems, particularly in customer relationship management and sales automation.',
     
@@ -128,7 +128,7 @@ const translations = {
     
     // About/Summary
     'about.title': 'Riepilogo',
-    'about.p1': 'Sono un ingegnere che ha completato con successo una doppia laurea in Ingegneria Elettrica-Elettronica e Informatica in soli tre anni. Come sopravvissuto al terremoto di Adıyaman, dove sono rimasto intrappolato sotto le macerie, ho sviluppato una forte resilienza e competenze nella gestione delle crisi. La mia competenza tecnica si concentra su C++, Qt Framework e machine learning (ML/AI), includendo modelli avanzati come YOLO, LSTM, GRU, ConvS2S, Seq2Seq e previsioni di serie temporali.',
+    'about.p1': 'Sono un ingegnere che ha completato con successo una doppia laurea in Ingegneria Elettrica-Elettronica e Informatica in soli tre anni. Ho realizzato una soluzione MES (Manufacturing Execution System) per Mepsan. La mia competenza tecnica si concentra su C++, Qt Framework e machine learning (ML/AI), includendo modelli avanzati come YOLO, LSTM, GRU, ConvS2S, Seq2Seq e previsioni di serie temporali.',
     'about.p2': 'Attraverso diversi progetti in molteplici aziende, ho costruito un ampio set di competenze che spaziano dalla fusione di sensori, sistemi autonomi, operazioni di volo e gestione di rete. Sono guidato da una passione per l\'efficienza, l\'innovazione e il lavoro di squadra, e il mio obiettivo di carriera è contribuire a progetti all\'intersezione tra ingegneria avanzata e intelligenza artificiale.',
     'about.p3': 'Inoltre, possiedo conoscenze pratiche dei processi CMDB e ITSM, con esperienza pratica nell\'integrazione e implementazione di soluzioni IT. Possiedo anche solide competenze nei sistemi CRM e SFA, in particolare nella gestione delle relazioni con i clienti e nell\'automazione delle vendite.',
     
@@ -194,3 +194,7 @@ export const useLanguage = () => {
   }
   return context;
 };
+
+// ### Module-Summary
+// Dil bağlamını yönetir, çevirileri tutar, dil seçimlerini kaydeder ve
+// komponentlerin t(key) üzerinden yerelleştirilmiş metin almasını sağlar.
