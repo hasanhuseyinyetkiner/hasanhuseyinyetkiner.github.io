@@ -52,8 +52,8 @@ const Hero: React.FC = () => {
             loading="eager"
             decoding="async"
             fetchPriority="high"
-            className="w-full max-w-md sm:max-w-lg lg:max-w-xl xl:max-w-2xl mx-auto rounded-2xl shadow-2xl object-cover object-center min-h-[360px] h-[70vh] max-h-[820px]"
-            style={{ objectPosition: 'center 15%' }}
+            className="w-full max-w-md sm:max-w-lg lg:max-w-xl xl:max-w-2xl mx-auto rounded-2xl shadow-2xl object-contain bg-secondary/60 min-h-[360px] h-auto max-h-[82vh] transition-[max-height] duration-300 ease-out"
+            style={{ objectPosition: 'center 30%' }}
           />
         </div>
       </div>
