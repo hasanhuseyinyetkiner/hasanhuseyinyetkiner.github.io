@@ -1,12 +1,30 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useLanguage } from '../contexts/LanguageContext';
-import { useTheme } from '../contexts/ThemeContext';
-import darkImage from '../assets/d.jpeg';
-import lightImage from '../assets/x.jpeg';
+import { Theme, useTheme } from '../contexts/ThemeContext';
+
+// SUMMARY: Prefetch hero portraits to make theme toggles instant.
+const heroImages: Record<Theme, string> = {
+  dark: '/dark.png',
+  light: '/white.png',
+};
+
+const preloadHeroImages = (sources: string[]): void => {
+  sources.forEach(src => {
+    const image = new Image();
+    image.src = src;
+  });
+};
+
+export const selectHeroImage = (theme: Theme): string => heroImages[theme];
 
 const Hero: React.FC = () => {
   const { t } = useLanguage();
   const { theme } = useTheme();
+  const heroImageSrc = selectHeroImage(theme);
+
+  useEffect(() => {
+    preloadHeroImages(Object.values(heroImages));
+  }, []);
   
   return (
     <section id="home" className="flex items-center min-h-screen py-16 md:py-20 lg:py-0">
@@ -29,8 +47,11 @@ const Hero: React.FC = () => {
         </div>
         <div className="w-full md:w-1/2 animate-fade-in-up [animation-delay:200ms] mt-8 md:mt-0">
           <img 
-            src={theme === 'dark' ? darkImage : lightImage}
+            src={heroImageSrc}
             alt="Hasan Hüseyin Yetkiner" 
+            loading="eager"
+            decoding="async"
+            fetchPriority="high"
             className="w-full max-w-md sm:max-w-lg lg:max-w-xl mx-auto rounded-lg shadow-2xl object-cover object-center h-[420px] sm:h-[500px] md:h-[580px] lg:h-[680px] xl:h-[750px]"
           />
         </div>
@@ -40,3 +61,7 @@ const Hero: React.FC = () => {
 };
 
 export default Hero;
+
+// ### Module-Summary
+// Tema bazlı kahraman görsellerini önceden yükler, kullanıcı dilini ve
+// seçilen temayı kullanarak kahraman metinlerini ve görselini render eder.

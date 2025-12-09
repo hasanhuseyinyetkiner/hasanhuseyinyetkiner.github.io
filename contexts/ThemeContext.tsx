@@ -1,6 +1,6 @@
 import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
 
-type Theme = 'light' | 'dark';
+export type Theme = 'light' | 'dark';
 
 interface ThemeContextType {
   theme: Theme;
@@ -39,4 +39,8 @@ export const useTheme = () => {
   }
   return context;
 };
+
+// ### Module-Summary
+// Tema durumunu saklar, toggle işlemini yönetir ve kök HTML sınıflarını
+// güncelleyerek sayfa genelinde ışık/koyu tema uygulamasını sağlar.
 
