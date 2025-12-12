@@ -58,7 +58,7 @@ const Header: React.FC = () => {
           </button>
           <select 
             value={language}
-            onChange={(e) => setLanguage(e.target.value as 'tr' | 'en' | 'it')}
+            onChange={(e) => setLanguage(e.target.value as 'tr' | 'en' | 'it' | 'de')}
             className="bg-transparent text-accent border border-accent/30 rounded px-1.5 py-0.5 text-xs md:px-2 md:py-1 md:text-sm hover:border-highlight transition-colors cursor-pointer"
             style={{ fontFamily: "'PP Editorial New', 'The Seasons', system-ui, sans-serif" }}
             aria-label="Dil Seçimi"
@@ -66,6 +66,7 @@ const Header: React.FC = () => {
             <option value="tr" className="bg-secondary text-accent">🇹🇷 TR</option>
             <option value="en" className="bg-secondary text-accent">🇬🇧 EN</option>
             <option value="it" className="bg-secondary text-accent">🇮🇹 IT</option>
+            <option value="de" className="bg-secondary text-accent">🇩🇪 DE</option>
           </select>
         </div>
       </div>

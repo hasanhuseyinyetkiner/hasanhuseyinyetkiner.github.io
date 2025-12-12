@@ -1,6 +1,6 @@
 import React, { createContext, useContext, useState, ReactNode } from 'react';
 
-type Language = 'tr' | 'en' | 'it';
+type Language = 'tr' | 'en' | 'it' | 'de';
 
 interface LanguageContextType {
   language: Language;
@@ -161,6 +161,57 @@ const translations = {
     // Footer
     'footer.rights': 'Tutti i Diritti Riservati.',
     'footer.tagline': 'Progettato e Sviluppato con Professionalità.',
+  },
+  de: {
+    // Header
+    'nav.summary': 'Zusammenfassung',
+    'nav.experience': 'Erfahrung',
+    'nav.education': 'Bildung',
+    'nav.projects': 'Projekte',
+    'nav.skills': 'Fähigkeiten',
+    'nav.contact': 'Kontakt',
+    
+    // Hero
+    'hero.title': 'Hasan Hüseyin Yetkiner',
+    'hero.subtitle': 'Elektrotechnik- und Computeringenieur',
+    'hero.description': 'Ein belastbarer und innovativer Ingenieur mit Expertise in C++, Qt Framework und KI/ML, leidenschaftlich daran interessiert, komplexe Herausforderungen an der Schnittstelle von fortschrittlicher Technik und künstlicher Intelligenz zu lösen.',
+    'hero.cta': 'Kontakt aufnehmen',
+    
+    // About/Summary
+    'about.title': 'Zusammenfassung',
+    'about.p1': 'Ich bin ein Ingenieur, der erfolgreich ein Doppelstudium in Elektrotechnik-Elektronik und Informatik in nur drei Jahren abgeschlossen hat. Ich habe eine MES-Lösung (Manufacturing Execution System) für Mepsan entwickelt. Meine technische Expertise konzentriert sich auf C++, das Qt Framework und maschinelles Lernen (ML/KI), einschließlich fortgeschrittener Modelle wie YOLO, LSTM, GRU, ConvS2S, Seq2Seq und Zeitreihenprognosen.',
+    'about.p2': 'Durch verschiedene Projekte in mehreren Unternehmen habe ich ein breites Spektrum an Fähigkeiten aufgebaut, das Sensorfusion, autonome Systeme, Flugbetrieb und Netzwerkmanagement umfasst. Ich bin von einer Leidenschaft für Effizienz, Innovation und Teamarbeit getrieben, und mein Karriereziel ist es, zu Projekten an der Schnittstelle von fortschrittlicher Technik und künstlicher Intelligenz beizutragen.',
+    'about.p3': 'Darüber hinaus bringe ich praktisches Wissen über CMDB- und ITSM-Prozesse mit praktischer Erfahrung in der Integration und Implementierung von IT-Lösungen mit. Ich verfüge auch über fundierte Expertise in CRM- und SFA-Systemen, insbesondere im Kundenbeziehungsmanagement und der Vertriebsautomatisierung.',
+    
+    // Contact
+    'contact.title': 'Lass uns in Kontakt treten',
+    'contact.description': 'Ich bin immer offen für Gespräche über neue Projekte, kreative Ideen oder Möglichkeiten, Teil einer ehrgeizigen Vision zu sein.',
+    'contact.cta': 'Senden Sie mir eine E-Mail',
+    
+    // Section Titles
+    'sections.experience': 'Erfahrung',
+    'sections.education': 'Bildung',
+    'sections.projects': 'Projekte',
+    'sections.skills': 'Fähigkeiten & Expertise',
+    'sections.achievements': 'Wichtige Erfolge',
+    
+    // Skills Section
+    'skills.technical': 'Technische Fähigkeiten',
+    'skills.personal': 'Persönliche Fähigkeiten',
+    
+    // Achievements
+    'achievement.award.title': 'Auszeichnung als bester Mitarbeiter',
+    'achievement.award.description': 'Erster Platz in der Leistung unter 196 Mitarbeitern bei Millenicom.',
+    'achievement.graduation.title': 'Beschleunigter Abschluss',
+    'achievement.graduation.description': 'Das Doppelstudium in 3 Jahren statt 4 Jahren abgeschlossen.',
+    'achievement.gimbal.title': 'Gimbal-Schnittstellen-Integration',
+    'achievement.gimbal.description': 'Beitrag zur integrierten Nutzung von C++ und dem Qt Framework für die Gimbal-Schnittstelle bei Baykar.',
+    'achievement.leadership.title': 'Leitung des technischen Supports',
+    'achievement.leadership.description': 'Leitung eines Teams und Schulung zur Lösung technischer Probleme für mehr als 1.000 Millenicom-Kunden.',
+    
+    // Footer
+    'footer.rights': 'Alle Rechte vorbehalten.',
+    'footer.tagline': 'Mit Professionalität entworfen und entwickelt.',
   },
 };;
 

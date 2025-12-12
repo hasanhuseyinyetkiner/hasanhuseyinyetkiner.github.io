@@ -45,11 +45,11 @@ const Hero: React.FC = () => {
             </a>
           </div>
         </div>
-        <div className={`w-full md:w-1/2 animate-fade-in-up [animation-delay:200ms] mt-8 md:mt-0 rounded-3xl p-4 sm:p-6 shadow-2xl border transition-all duration-500 ${
+        <div className={`w-full md:w-1/2 animate-fade-in-up [animation-delay:200ms] mt-8 md:mt-0 rounded-3xl p-4 sm:p-6 transition-all duration-500 border border-transparent ${
           theme === 'dark' 
-            ? 'bg-primary/90 border-highlight/10' 
-            : 'bg-secondary/95 border-highlight/20'
-        }`}>
+            ? 'bg-[rgba(0,0,0,0.9)] shadow-2xl border-highlight/10' 
+            : 'bg-[var(--primary)] shadow-[0_8px_32px_rgba(226,208,136,0.25)]'
+        }`} style={theme === 'light' ? { opacity: 0.95 } : {}}>
           <img 
             src={heroImageSrc}
             alt="Hasan Hüseyin Yetkiner" 
@@ -57,9 +57,9 @@ const Hero: React.FC = () => {
             decoding="async"
             fetchPriority="high"
             className={`w-full max-w-md sm:max-w-lg lg:max-w-xl xl:max-w-2xl mx-auto rounded-2xl shadow-xl object-contain min-h-[360px] h-auto max-h-[82vh] transition-all duration-500 ease-out ${
-              theme === 'dark' ? 'bg-primary' : 'bg-white/5'
+              theme === 'dark' ? 'bg-primary' : 'bg-[var(--primary)]'
             }`}
-            style={{ objectPosition: 'center 30%' }}
+            style={theme === 'light' ? { opacity: 0.8 } : { objectPosition: 'center 30%' }}
           />
         </div>
       </div>
