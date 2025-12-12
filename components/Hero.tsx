@@ -45,14 +45,20 @@ const Hero: React.FC = () => {
             </a>
           </div>
         </div>
-        <div className="w-full md:w-1/2 animate-fade-in-up [animation-delay:200ms] mt-8 md:mt-0 bg-primary/90 rounded-3xl p-4 sm:p-6 shadow-2xl border border-highlight/10">
+        <div className={`w-full md:w-1/2 animate-fade-in-up [animation-delay:200ms] mt-8 md:mt-0 rounded-3xl p-4 sm:p-6 shadow-2xl border transition-all duration-500 ${
+          theme === 'dark' 
+            ? 'bg-primary/90 border-highlight/10' 
+            : 'bg-secondary/95 border-highlight/20'
+        }`}>
           <img 
             src={heroImageSrc}
             alt="Hasan Hüseyin Yetkiner" 
             loading="eager"
             decoding="async"
             fetchPriority="high"
-            className="w-full max-w-md sm:max-w-lg lg:max-w-xl xl:max-w-2xl mx-auto rounded-2xl shadow-xl object-contain min-h-[360px] h-auto max-h-[82vh] transition-[max-height] duration-300 ease-out bg-primary"
+            className={`w-full max-w-md sm:max-w-lg lg:max-w-xl xl:max-w-2xl mx-auto rounded-2xl shadow-xl object-contain min-h-[360px] h-auto max-h-[82vh] transition-all duration-500 ease-out ${
+              theme === 'dark' ? 'bg-primary' : 'bg-white/5'
+            }`}
             style={{ objectPosition: 'center 30%' }}
           />
         </div>
