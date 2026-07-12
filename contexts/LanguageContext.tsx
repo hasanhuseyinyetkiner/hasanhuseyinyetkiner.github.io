@@ -1,6 +1,6 @@
 import React, { createContext, useContext, useState, ReactNode } from 'react';
 
-type Language = 'tr' | 'en' | 'it' | 'de';
+export type Language = 'tr' | 'en' | 'it' | 'de';
 
 interface LanguageContextType {
   language: Language;
@@ -17,6 +17,13 @@ const translations = {
     'nav.projects': 'Projeler',
     'nav.skills': 'Yetenekler',
     'nav.contact': 'İletişim',
+    'nav.primary': 'Ana navigasyon',
+    'nav.menu': 'Menüyü aç',
+    'nav.close': 'Menüyü kapat',
+    'theme.light': 'Açık temaya geç',
+    'theme.dark': 'Koyu temaya geç',
+    'language.select': 'Dil seçimi',
+    'accessibility.skip': 'Ana içeriğe geç',
     
     // Hero
     'hero.title': 'Hasan Hüseyin Yetkiner',
@@ -68,6 +75,13 @@ const translations = {
     'nav.projects': 'Projects',
     'nav.skills': 'Skills',
     'nav.contact': 'Contact',
+    'nav.primary': 'Primary navigation',
+    'nav.menu': 'Open menu',
+    'nav.close': 'Close menu',
+    'theme.light': 'Switch to light theme',
+    'theme.dark': 'Switch to dark theme',
+    'language.select': 'Select language',
+    'accessibility.skip': 'Skip to main content',
     
     // Hero
     'hero.title': 'Hasan Hüseyin Yetkiner',
@@ -119,6 +133,13 @@ const translations = {
     'nav.projects': 'Progetti',
     'nav.skills': 'Competenze',
     'nav.contact': 'Contatto',
+    'nav.primary': 'Navigazione principale',
+    'nav.menu': 'Apri menu',
+    'nav.close': 'Chiudi menu',
+    'theme.light': 'Passa al tema chiaro',
+    'theme.dark': 'Passa al tema scuro',
+    'language.select': 'Seleziona lingua',
+    'accessibility.skip': 'Vai al contenuto principale',
     
     // Hero
     'hero.title': 'Hasan Hüseyin Yetkiner',
@@ -170,6 +191,13 @@ const translations = {
     'nav.projects': 'Projekte',
     'nav.skills': 'Fähigkeiten',
     'nav.contact': 'Kontakt',
+    'nav.primary': 'Hauptnavigation',
+    'nav.menu': 'Menü öffnen',
+    'nav.close': 'Menü schließen',
+    'theme.light': 'Zum hellen Design wechseln',
+    'theme.dark': 'Zum dunklen Design wechseln',
+    'language.select': 'Sprache auswählen',
+    'accessibility.skip': 'Zum Hauptinhalt springen',
     
     // Hero
     'hero.title': 'Hasan Hüseyin Yetkiner',

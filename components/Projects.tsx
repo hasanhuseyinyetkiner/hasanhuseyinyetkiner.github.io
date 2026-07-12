@@ -1,49 +1,56 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { caseStudyLabels, projectCaseStudies, ProjectCaseStudy } from '../data/portfolio';
 import AnimatedSection from './AnimatedSection';
 import { useLanguage } from '../contexts/LanguageContext';
 
-const projects = [
-  {
-    title: 'AI-powered Herd Management System (Ongoing)',
-    description: 'Developing a scalable system integrating Flutter, RESTful API, PostgreSQL, Vector Database, YOLO, LSTM, and GRU. Strengthening decision-making mechanisms with AI algorithms.',
-  },
-  {
-    title: 'Mini Soccer Mobile App',
-    description: 'Designed and implemented a mobile app for booking soccer fields using FlutterFlow Framework.',
-  },
-  {
-    title: 'Plant Classification',
-    description: 'Developed two deep learning models for plant classification and compared their performance.',
-  },
-  {
-    title: 'Breast Cancer Detection',
-    description: 'Built a software system for breast cancer detection using mammography images with deep learning techniques.',
-  }
-];
+interface ProjectCardProps {
+  project: ProjectCaseStudy;
+}
 
-const ProjectCard: React.FC<typeof projects[0]> = ({ title, description }) => (
-  <div className="bg-secondary/40 backdrop-blur-sm p-6 rounded-2xl border border-gray-800 hover:border-highlight/50 transition-all duration-500 hover:-translate-y-2 h-full flex flex-col">
-    <h3 className="text-lg md:text-xl text-white mb-3" style={{fontFamily: "'PP Editorial New', 'The Seasons', system-ui, sans-serif", fontWeight: 500, letterSpacing: '-0.01em'}}>
-      {title}
-    </h3>
-    <p className="text-gray-400 text-sm leading-relaxed flex-grow" style={{fontFamily: "'PP Editorial New', 'The Seasons', system-ui, sans-serif", fontWeight: 400}}>
-      {description}
-    </p>
-  </div>
-);
+const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
+  const [isOpen, setIsOpen] = useState(false);
+  const { language } = useLanguage();
+  const content = project.content[language];
+  const labels = caseStudyLabels[language];
+  const panelId = `${project.id}-details`;
+
+  return (
+    <article className="flex h-full flex-col rounded-2xl border border-gray-800 bg-secondary/40 p-6 backdrop-blur-sm transition-all duration-500 hover:-translate-y-2 hover:border-highlight/50">
+      <p className="mb-3 text-xs uppercase tracking-[0.16em] text-highlight">{labels.eyebrow}</p>
+      <h3 className="mb-3 text-xl text-white" style={{ fontFamily: "'PP Editorial New', 'The Seasons', system-ui, sans-serif", fontWeight: 500, letterSpacing: '-0.01em' }}>{content.title}</h3>
+      <p className="flex-grow text-sm leading-relaxed text-gray-400" style={{ fontFamily: "'PP Editorial New', 'The Seasons', system-ui, sans-serif", fontWeight: 400 }}>{content.summary}</p>
+      <button
+        type="button"
+        className="mt-6 inline-flex w-fit items-center gap-2 text-sm text-accent underline decoration-highlight/60 underline-offset-4 transition-colors hover:text-white"
+        aria-expanded={isOpen}
+        aria-controls={panelId}
+        onClick={() => setIsOpen((open) => !open)}
+      >
+        {isOpen ? content.closeLabel : content.detailsLabel}
+        <span aria-hidden="true">{isOpen ? '−' : '+'}</span>
+      </button>
+      {isOpen && (
+        <div id={panelId} className="mt-6 space-y-5 border-t border-highlight/20 pt-5 text-sm leading-relaxed text-gray-300">
+          <div><h4 className="mb-1 text-accent">{labels.problem}</h4><p>{content.problem}</p></div>
+          <div><h4 className="mb-1 text-accent">{labels.approach}</h4><p>{content.approach}</p></div>
+          <div><h4 className="mb-2 text-accent">{labels.technology}</h4><ul className="flex flex-wrap gap-2">{content.technologies.map((technology) => <li key={technology} className="rounded-full border border-highlight/30 px-3 py-1 text-xs text-accent">{technology}</li>)}</ul></div>
+          <div><h4 className="mb-1 text-accent">{labels.status}</h4><p>{content.status}</p></div>
+        </div>
+      )}
+    </article>
+  );
+};
 
 const Projects: React.FC = () => {
   const { t } = useLanguage();
-  
+
   return (
     <AnimatedSection id="projects">
-      <h2 className="text-4xl md:text-5xl font-light text-center text-white mb-16 leading-tight" style={{fontFamily: "'PP Editorial New', 'The Seasons', system-ui, sans-serif", fontWeight: 300, letterSpacing: '-0.02em'}}>
+      <h2 className="mb-16 text-center text-4xl font-light leading-tight text-white md:text-5xl" style={{ fontFamily: "'PP Editorial New', 'The Seasons', system-ui, sans-serif", fontWeight: 300, letterSpacing: '-0.02em' }}>
         {t('sections.projects')}
       </h2>
-      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-        {projects.map((project, index) => (
-          <ProjectCard key={index} {...project} />
-        ))}
+      <div className="mx-auto grid max-w-6xl grid-cols-1 gap-6 md:grid-cols-2">
+        {projectCaseStudies.map((project) => <ProjectCard key={project.id} project={project} />)}
       </div>
     </AnimatedSection>
   );

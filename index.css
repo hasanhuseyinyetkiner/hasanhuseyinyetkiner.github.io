@@ -1,0 +1,122 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
+  --color-accent: var(--accent);
+  --color-highlight: var(--highlight);
+  --font-sans: "PP Editorial New", "The Seasons", system-ui, sans-serif;
+  --font-serif: "The Seasons", Georgia, serif;
+  --animate-fade-in-up: fade-in-up 0.8s ease-out forwards;
+
+  @keyframes fade-in-up {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+@font-face {
+  font-family: "PP Editorial New";
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+  src: url("https://pangrampangram.com/cdn/shop/files/PPEditorialNew-Ultralight.woff2") format("woff2");
+}
+
+:root {
+  --primary: #000000;
+  --secondary: #111111;
+  --accent: #e5e7eb;
+  --highlight: #a88532;
+  --text: #ffffff;
+  color-scheme: dark;
+}
+
+.light {
+  --primary: #e2d088;
+  --secondary: #d4c070;
+  --accent: #69443c;
+  --highlight: #c9a857;
+  --text: #000000;
+  color-scheme: light;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background: var(--primary);
+  color: var(--accent);
+  font-family: "PP Editorial New", "The Seasons", system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: "kern" 1, "liga" 1;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "PP Editorial New", "The Seasons", system-ui, sans-serif;
+  font-feature-settings: "kern" 1, "liga" 1, "ss01" 1;
+}
+
+section {
+  scroll-margin-top: 5.5rem;
+}
+
+.text-white {
+  color: var(--text);
+}
+
+.light .text-gray-300,
+.light .text-gray-400,
+.light .text-gray-500 {
+  color: #69443c;
+}
+
+.light img:not(.hero-image) {
+  filter: brightness(1.05) contrast(1.03);
+}
+
+.skip-link {
+  position: fixed;
+  z-index: 100;
+  left: 1rem;
+  top: -4rem;
+  border-radius: 0.5rem;
+  background: var(--highlight);
+  color: #fff;
+  padding: 0.75rem 1rem;
+  transition: top 150ms ease;
+}
+
+.skip-link:focus {
+  top: 1rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
