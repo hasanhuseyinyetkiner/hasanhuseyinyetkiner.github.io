@@ -6,9 +6,18 @@ const getExperienceData = (language: string) => {
   const data = {
     en: [
       {
-        role: 'Full Stack Developer',
-        company: 'Mepsan',
-        period: '04/2025 - Present',
+        role: 'Team Lead',
+        company: 'Mepsan A.S.',
+        period: '01/2026 - 06/2026',
+        description: [
+          'Led a software delivery team at Mepsan for six months.',
+          'Coordinated engineering collaboration and delivery workflows using Jenkins and GitLab.',
+        ]
+      },
+      {
+        role: 'Software Engineer (Embedded & Backend Systems)',
+        company: 'Mepsan A.S.',
+        period: '04/2025 - 06/2026',
         description: [
           'Delivered a MES (Manufacturing Execution System) that orchestrates production and field device data for Mepsan.',
           'Developed communication software for smart pump systems using Qt/C++ in Linaro, RS485, and Ubuntu environments.',
@@ -20,7 +29,7 @@ const getExperienceData = (language: string) => {
         ]
       },
       {
-        role: 'C++ Qt Developer',
+        role: 'C++ Qt Developer (Internship)',
         company: 'Baykar Technologies',
         period: '09/2024 - 12/2024',
         description: [
@@ -47,7 +56,7 @@ const getExperienceData = (language: string) => {
         description: [
           'As an intern, worked on ALTAY Tank projects using the Robot Operating System (ROS) with tools such as Gazebo and Rviz on Ubuntu.',
           'Gained experience in high-accuracy mapping and localization by processing data from LIDAR sensors.',
-          'Through my optimizations, achieved a 100% time saving in sensor data processing.',
+          'Contributed to more efficient sensor-data processing by improving the relevant workflows.',
         ]
       },
       {
@@ -64,9 +73,18 @@ const getExperienceData = (language: string) => {
     ],
     tr: [
       {
-        role: 'Full Stack Geliştirici',
-        company: 'Mepsan',
-        period: '04/2025 - Devam Ediyor',
+        role: 'Takım Lideri',
+        company: 'Mepsan A.Ş.',
+        period: '01/2026 - 06/2026',
+        description: [
+          'Mepsan’da altı ay boyunca yazılım teslimat ekibine liderlik ettim.',
+          'Jenkins ve GitLab kullanarak mühendislik iş birliğini ve teslimat iş akışlarını koordine ettim.',
+        ]
+      },
+      {
+        role: 'Yazılım Mühendisi (Gömülü Sistemler ve Backend)',
+        company: 'Mepsan A.Ş.',
+        period: '04/2025 - 06/2026',
         description: [
           'Mepsan için üretim ve saha cihazı verisini orkestre eden bir MES (Manufacturing Execution System) teslim ettim.',
           'Linaro, RS485 ve Ubuntu ortamlarında Qt/C++ kullanarak akıllı pompa sistemleri için iletişim yazılımı geliştirdim.',
@@ -78,7 +96,7 @@ const getExperienceData = (language: string) => {
         ]
       },
       {
-        role: 'C++ Qt Geliştirici',
+        role: 'C++ Qt Geliştirici (Staj)',
         company: 'Baykar Teknoloji',
         period: '09/2024 - 12/2024',
         description: [
@@ -105,7 +123,7 @@ const getExperienceData = (language: string) => {
         description: [
           'Stajyer olarak, Ubuntu üzerinde Gazebo ve Rviz gibi araçlarla Robot İşletim Sistemi (ROS) kullanarak ALTAY Tank projeleri üzerinde çalıştım.',
           'LIDAR sensörlerinden gelen verileri işleyerek yüksek doğrulukta haritalama ve lokalizasyon deneyimi kazandım.',
-          'Optimizasyonlarım sayesinde sensör veri işlemede %100 zaman tasarrufu sağladım.',
+          'İlgili iş akışlarını iyileştirerek sensör veri işlemenin daha verimli hâle gelmesine katkı sağladım.',
         ]
       },
       {
@@ -122,9 +140,18 @@ const getExperienceData = (language: string) => {
     ],
     it: [
       {
-        role: 'Sviluppatore Full Stack',
-        company: 'Mepsan',
-        period: '04/2025 - Presente',
+        role: 'Team Lead',
+        company: 'Mepsan A.S.',
+        period: '01/2026 - 06/2026',
+        description: [
+          'Ho guidato un team di consegna software presso Mepsan per sei mesi.',
+          'Ho coordinato la collaborazione ingegneristica e i flussi di consegna usando Jenkins e GitLab.',
+        ]
+      },
+      {
+        role: 'Ingegnere Software (Sistemi Embedded e Backend)',
+        company: 'Mepsan A.S.',
+        period: '04/2025 - 06/2026',
         description: [
           'Consegnato un MES (Manufacturing Execution System) che orchestra dati di produzione e dispositivi sul campo per Mepsan.',
           'Sviluppato software di comunicazione per sistemi di pompe intelligenti utilizzando Qt/C++ in ambienti Linaro, RS485 e Ubuntu.',
@@ -136,7 +163,7 @@ const getExperienceData = (language: string) => {
         ]
       },
       {
-        role: 'Sviluppatore C++ Qt',
+        role: 'Sviluppatore C++ Qt (Tirocinio)',
         company: 'Baykar Technologies',
         period: '09/2024 - 12/2024',
         description: [
@@ -163,7 +190,7 @@ const getExperienceData = (language: string) => {
         description: [
           'Come stagista, lavorato su progetti di carri armati ALTAY utilizzando il Robot Operating System (ROS) con strumenti come Gazebo e Rviz su Ubuntu.',
           'Acquisito esperienza nella mappatura ad alta precisione e nella localizzazione elaborando dati da sensori LIDAR.',
-          'Attraverso le mie ottimizzazioni, ottenuto un risparmio di tempo del 100% nell\'elaborazione dei dati dei sensori.',
+          'Ho contribuito a rendere più efficiente l\'elaborazione dei dati dei sensori migliorando i flussi di lavoro pertinenti.',
         ]
       },
       {

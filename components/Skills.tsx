@@ -5,7 +5,8 @@ import { useLanguage } from '../contexts/LanguageContext';
 const technicalSkills = [
   'C++', 'Qt', 'STL', 'Flutter', 'PostgreSQL', 'Node.js', 'Python',
   'TCP/IP', 'OpenCV', 'LSTM', 'REST', 'Time Serial Forecasting',
-  'Express.js', 'Socket.io', 'Gstreamer', 'LLM', 'Deep Learning'
+  'Express.js', 'Socket.io', 'Gstreamer', 'LLM', 'Deep Learning',
+  'Wireshark', 'Nmap', 'Metasploit', 'SonarQube', 'OT/IoT Security', 'Jenkins', 'GitLab'
 ];
 
 const personalSkills = [

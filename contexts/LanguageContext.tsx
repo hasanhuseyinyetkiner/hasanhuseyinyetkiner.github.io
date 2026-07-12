@@ -27,8 +27,8 @@ const translations = {
     
     // Hero
     'hero.title': 'Hasan Hüseyin Yetkiner',
-    'hero.subtitle': 'Elektrik-Elektronik ve Bilgisayar Mühendisi',
-    'hero.description': 'C++, Qt Framework ve Yapay Zeka/Makine Öğrenimi konularında uzmanlığa sahip, ileri mühendislik ve yapay zekanın kesişimindeki karmaşık zorlukları çözme konusunda tutkulu, dayanıklı ve yenilikçi bir mühendis.',
+    'hero.subtitle': 'OT/IoT Güvenlik Mühendisi',
+    'hero.description': 'Endüstriyel sistemler, kritik altyapı güvenliği ve uygulamalı mühendislik kesişiminde çalışan bir OT/IoT güvenlik mühendisi.',
     'hero.cta': 'İletişime Geç',
     
     // About/Summary
@@ -85,8 +85,8 @@ const translations = {
     
     // Hero
     'hero.title': 'Hasan Hüseyin Yetkiner',
-    'hero.subtitle': 'Electrical-Electronics & Computer Engineer',
-    'hero.description': 'A resilient and innovative engineer with expertise in C++, Qt Framework, and AI/ML, passionate about solving complex challenges at the intersection of advanced engineering and artificial intelligence.',
+    'hero.subtitle': 'OT/IoT Security Engineer',
+    'hero.description': 'An OT/IoT security engineer working at the intersection of industrial systems, critical-infrastructure security, and applied engineering.',
     'hero.cta': 'Get In Touch',
     
     // About/Summary
@@ -143,8 +143,8 @@ const translations = {
     
     // Hero
     'hero.title': 'Hasan Hüseyin Yetkiner',
-    'hero.subtitle': 'Ingegnere Elettrico-Elettronico e Informatico',
-    'hero.description': 'Un ingegnere resiliente e innovativo con competenze in C++, Qt Framework e AI/ML, appassionato di risolvere sfide complesse all\'intersezione tra ingegneria avanzata e intelligenza artificiale.',
+    'hero.subtitle': 'Ingegnere della sicurezza OT/IoT',
+    'hero.description': 'Un ingegnere della sicurezza OT/IoT che opera all\'intersezione tra sistemi industriali, sicurezza delle infrastrutture critiche e ingegneria applicata.',
     'hero.cta': 'Contattami',
     
     // About/Summary
@@ -201,8 +201,8 @@ const translations = {
     
     // Hero
     'hero.title': 'Hasan Hüseyin Yetkiner',
-    'hero.subtitle': 'Elektrotechnik- und Computeringenieur',
-    'hero.description': 'Ein belastbarer und innovativer Ingenieur mit Expertise in C++, Qt Framework und KI/ML, leidenschaftlich daran interessiert, komplexe Herausforderungen an der Schnittstelle von fortschrittlicher Technik und künstlicher Intelligenz zu lösen.',
+    'hero.subtitle': 'OT/IoT-Sicherheitsingenieur',
+    'hero.description': 'Ein OT/IoT-Sicherheitsingenieur an der Schnittstelle von industriellen Systemen, kritischer Infrastruktur und angewandter Technik.',
     'hero.cta': 'Kontakt aufnehmen',
     
     // About/Summary

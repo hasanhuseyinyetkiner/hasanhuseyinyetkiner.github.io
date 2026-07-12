@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://hasanhuseyinyetkiner.github.io/sitemap.xml
